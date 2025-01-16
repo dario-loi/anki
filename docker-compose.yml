@@ -1,0 +1,8 @@
+services:
+  anki:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./decks:/app/decks
+    restart: unless-stopped
