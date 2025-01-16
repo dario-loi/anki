@@ -1,4 +1,4 @@
-> ![NOTE]
+> [!NOTE]
 > This codebase was hastily assembled with wide usage of AI tools for personal usage 
 > during the fires of an exam session. It is not intended to reflect directly on 
 > my coding style, quality of work or ethics. Rather I am sharing it in the hope
