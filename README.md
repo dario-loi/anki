@@ -40,4 +40,8 @@ pip install -r requirements.txt
 uvicorn web:app --reload --port 8000
 ```
 
+P.S:
+
+I know that a backend is completely useless and most of this could be done front-end only, we accept pull requests if this bothers you :).
+
 In both cases, you can find the app deployed at `http://localhost:8000`.
