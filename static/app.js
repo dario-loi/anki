@@ -250,6 +250,10 @@ function updateTimer() {
         handleTimerComplete();
     }
 
+    if (timerState.timeLeft <= 5) {
+        playSound(440, 0.1, 'sine');
+    }
+
     updateTimerDisplay();
 }
 
