@@ -42,52 +42,47 @@ const skipBreakButton = document.getElementById('skip-break');
 
 
 async function playSound(freq, duration, type = 'sine') {
-    if (!audioContext) return;
-
-    const oscillator = audioContext.createOscillator();
-    const gainNode = audioContext.createGain();
-
-    oscillator.type = type;
-    oscillator.frequency.value = freq;
-
-    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
-
-    oscillator.connect(gainNode);
-    gainNode.connect(audioContext.destination);
-
-    oscillator.start();
-    oscillator.stop(audioContext.currentTime + duration);
+  if (!audioContext) return;
+  const oscillator = audioContext.createOscillator();
+  const gainNode = audioContext.createGain();
+  
+  oscillator.type = type;
+  oscillator.frequency.value = freq;
+  
+  gainNode.gain.setValueAtTime(0.15, audioContext.currentTime);
+  gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + duration);
+  
+  oscillator.connect(gainNode);
+  gainNode.connect(audioContext.destination);
+  oscillator.start();
+  oscillator.stop(audioContext.currentTime + duration);
 }
 
-
-
 function playBreakStartSound() {
-    setTimeout(() => playSound(261.63, 1.6), 0); // C4
-    setTimeout(() => playSound(523.25, 0.9), 0); // C5
-    setTimeout(() => playSound(659.25, 1.1), 200); // E5
-    setTimeout(() => playSound(783.99, 1.0), 400); // G5
-    setTimeout(() => playSound(987.77, 1.1), 600); // B5
+  setTimeout(() => playSound(261.63, 1.4, 'sine'), 0);    // C4
+  setTimeout(() => playSound(523.25, 0.8, 'sine'), 50);   // C5
+  setTimeout(() => playSound(659.25, 0.9, 'sine'), 250);  // E5
+  setTimeout(() => playSound(783.99, 0.8, 'sine'), 450);  // G5
+  setTimeout(() => playSound(987.77, 0.9, 'sine'), 650);  // B5
 }
 
 function playBreakEndSound() {
-    setTimeout(() => playSound(261.63, 1.6), 0); // C4
-    setTimeout(() => playSound(523.25, 0.9), 0); // C5
-    setTimeout(() => playSound(987.77, 1.1), 200); // B5
-    setTimeout(() => playSound(783.99, 1.0), 400); // G5
-    setTimeout(() => playSound(659.25, 1.1), 600); // E5
+  setTimeout(() => playSound(261.63, 1.4, 'sine'), 0);    // C4
+  setTimeout(() => playSound(523.25, 0.8, 'sine'), 50);   // C5
+  setTimeout(() => playSound(987.77, 0.9, 'sine'), 250);  // B5
+  setTimeout(() => playSound(783.99, 0.8, 'sine'), 450);  // G5
+  setTimeout(() => playSound(659.25, 0.9, 'sine'), 650);  // E5
 }
 
 function playStartSound() {
-    setTimeout(() => playSound(523.25, 1.6), 0); // C5
-    setTimeout(() => playSound(783.99, 0.9), 0); // G5
+  setTimeout(() => playSound(523.25, 1.4, 'sine'), 0);   // C5
+  setTimeout(() => playSound(783.99, 0.7, 'sine'), 50);  // G5
 }
 
 function playPauseSound() {
-    setTimeout(() => playSound(523.25, 1.6), 0); // C5
-    setTimeout(() => playSound(392.00, 0.9), 0); // G4
+  setTimeout(() => playSound(523.25, 1.4, 'sine'), 0);   // C5
+  setTimeout(() => playSound(392.00, 0.7, 'sine'), 50);  // G4
 }
-
 
 // Render content with Markdown and MathJax
 function renderContent(content, element) {

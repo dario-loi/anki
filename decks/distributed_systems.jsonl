@@ -1,0 +1,65 @@
+{"front": "Main features distinguishing a pump and dump from a crowd pump operation", "back": "1) Coordination & leadership - pump and dumps have clear leaders/admins, crowd pumps lack coordination 2) Timeframe - pump and dumps last minutes/hours, crowd pumps take days 3) Goal - pump and dumps aim to scam investors, crowd pumps encourage holding"}
+{"front": "Average latency penalty when using Tor compared to direct connection", "back": "For 60MB file: ~300s through Tor vs 210s direct. For 55KB webpage: median 2.8s through Tor vs 0.3s direct"}
+{"front": "What is the technique used by Tor to avoid tracking users through their MAC addresses?", "back": "Tor probes contain a nonce field that changes the hash, preventing device tracking through MAC addresses. The probes are sent every 15-60 seconds depending on device power state"}
+{"front": "Formula for Adamic-Adar similarity measure used in probe request analysis", "back": "$f_{ADA}(u,v) = \\sum_{w\\in N(u)\\cap N(v)} \\frac{1}{\\log_2(|M(w)|)}$ where $N(u)$ is device $u$'s PNL and $M(w)$ is set of devices with SSID $w$"}
+{"front": "Key difference between Bitcoin's and Ethereum's smart contract capabilities", "back": "Bitcoin has basic scripting capabilities while Ethereum introduced Turing-complete smart contracts, allowing complex decentralized applications (dApps)"}
+{"front": "Percentage of 1-day rug pulls that are successful on BSC vs Ethereum", "back": "BSC: 39.1% successful, Ethereum: 61.9% successful. Higher success rate on Ethereum likely due to higher average investment amounts"}
+{"front": "Main vectors for deanonymizing Tor users through probe requests", "back": "1) MAC address tracking 2) SSID correlation across locations 3) Language fingerprinting of SSIDs 4) Timing analysis of probe patterns"}
+{"front": "Probability of successful Bitcoin double-spend attack with q=0.1 after z=6 blocks", "back": "P = 0.0002428 or about 0.024%"}
+{"front": "Formula for Bitcoin attacker catch-up probability from z blocks behind", "back": "$q_z = \\begin{cases} 1 & \\text{if } p \\leq q \\\\ (q/p)^z & \\text{if } p > q \\end{cases}$ where p is honest node probability and q is attacker probability"}
+{"front": "Percentage of devices exposing PNL through probe requests by vendor", "back": "RIM: 92%, HTC: 55%, Sony: 35%, Apple: 35%, Samsung: 31%, Nokia: 13%"}
+{"front": "Formula for vendor assortativity in social networks derived from probe requests", "back": "$a(G) = \\frac{\\sum_{i\\in C} e_{ii} - \\sum_{i\\in C} c_i^2}{1 - \\sum_{i\\in C} c_i^2}$ where $e_{ii}$ is fraction of edges between same vendor and $c_i$ is fraction of nodes of vendor i"}
+{"front": "Three requirements for a crypto wash trading operation to be profitable", "back": "1) Low transaction fees 2) Liquid trading pairs 3) Either token rewards system OR external investors willing to buy at inflated prices"}
+{"front": "Common patterns in successful rug pull operations", "back": "1) Token name mimics popular project 2) Initial liquidity 15-20x higher than average 3) Multiple wallets performing wash trading 4) Fast removal of liquidity within 24h"}
+{"front": "Key differences between sniper bots 1.0 and 2.0", "back": "1.0 focused on product availability on websites, 2.0 monitors blockchain mempool for new token listings. 2.0 bots compete to be included in same block as liquidity addition"}
+{"front": "What is a blockchain fork?", "back": "When two different blocks are accepted because both got the hash right, creating parallel chains. The longest chain eventually wins"}
+{"front": "What is a PNL in WiFi terms?", "back": "Preferred Network List - stored networks that a device has connected to in the past and tries to reconnect to automatically"}
+{"front": "What protocol does Tor use for relay cell encryption?", "back": "AES-128 in counter mode"}
+{"front": "What is the size of a Tor cell?", "back": "512 bytes"}
+{"front": "Three types of Tor nodes", "back": "Entry/Guard nodes, Middle/Relay nodes, Exit nodes"}
+{"front": "Most common use of probe requests", "back": "To efficiently discover nearby WiFi networks without keeping the radio on continuously"}
+{"front": "What is the 'circID' in Tor?", "back": "Circuit identifier that specifies which circuit a cell refers to, unique per connection"}
+{"front": "What is perfect forward secrecy?", "back": "Property where compromising current keys cannot decrypt past traffic"}
+{"front": "Main goal of Bitcoin's proof-of-work", "back": "To make changing historic transactions computationally impractical without redoing all the work"}
+{"front": "What is a sniper bot?", "back": "Automated program that monitors blockchain mempool to buy tokens as soon as they are listed on DEXes"}
+{"front": "What is a leaky-pipe circuit in Tor?", "back": "Circuit topology where traffic can exit from intermediate nodes, not just the end"}
+{"front": "What is a directory server in Tor?", "back": "Trusted nodes that provide signed directories describing known routers and their current state"}
+{"front": "Default Tor path length", "back": "3 hops"}
+{"front": "Common wash trading pattern", "back": "Two accounts repeatedly trading same asset back and forth to create artificial volume"}
+{"front": "Main defense against Sybil attacks in Tor", "back": "Directory servers must manually approve new nodes before they are included in the network"}
+{"front": "State the three guarantees in CAP theorem", "back": "Consistency: all nodes see same data at same time\nAvailability: every request gets a response\nPartition tolerance: system works despite network partitions"}
+{"front": "What must be sacrificed according to CAP theorem when network partition occurs?", "back": "Either Consistency or Availability must be given up - cannot maintain both when network is partitioned"}
+{"front": "BitTorrent's solution to free-riding", "back": "Choking algorithm: peers can upload to max 4 others, preferring those who provide good download rates. Uses 'optimistic unchoking' to give new peers a chance"}
+{"front": "Key components of BitTorrent protocol", "back": "1) Tracker - coordinates peers 2) Seeder - has complete file 3) Leecher - downloading file 4) Torrent file - contains metadata"}
+{"front": "How does Bitcoin achieve consensus on next block?", "back": "Miners compete to solve proof-of-work puzzle. First to find solution broadcasts block to network. Other nodes verify and accept by building on top of it"}
+{"front": "What makes Bitcoin's proof-of-work difficult?", "back": "Must find nonce that makes block hash have specific number of leading zeros. Difficulty adjusts to maintain ~10 minute block time"}
+{"front": "Three key innovations of Tor over original onion routing", "back": "1) Perfect forward secrecy 2) Separation of protocol cleaning from anonymity 3) Directory servers for network state"}
+{"front": "Requirements for Interactive Consistency (IC)", "back": "1) Agreement: All honest processes agree on each process's value\n2) Validity: If process i is honest, all honest processes use its actual value\n3) Termination: All honest processes eventually decide"}
+{"front": "Requirements for Byzantine Agreement (BA)", "back": "1) Agreement: All honest processes agree on same value\n2) Validity: If all honest processes start with v, they decide v\n3) Termination: All honest processes eventually decide"}
+{"front": "How to reduce IC to BA", "back": "For each process i: Run BA using process i's value as input. All processes decide on same value for i. Collection of decisions forms IC solution"}
+{"front": "How to reduce BA to IC", "back": "Run IC. Each process takes majority value from IC result as its BA decision. If no majority, use default value"}
+{"front": "What is the essence of Hashcash proof-of-work?", "back": "Finding partial hash collision - hash must have specified number of leading zero bits. Work is hard to do but easy to verify"}
+{"front": "BitTorrent piece selection strategy", "back": "1) Random first piece\n2) Rarest first for subsequent pieces\n3) Endgame mode for last pieces"}
+{"front": "How does Bitcoin prevent double spending?", "back": "Through public ledger (blockchain) and proof-of-work consensus. All nodes verify no coins spent twice. Attacker needs >50% hash power to succeed"}
+{"front": "Main privacy challenge of Tor", "back": "End-to-end timing correlation - adversary watching entry and exit can link traffic patterns"}
+{"front": "Why does BitTorrent split files into pieces?", "back": "Allows parallel downloading from multiple peers and verification of piece integrity via SHA1 hashes"}
+{"front": "BitTorrent's piece prioritization in Endgame Mode", "back": "Requests all remaining sub-pieces simultaneously from multiple peers, sends cancels for received pieces to avoid wasting bandwidth"}
+{"front": "Why do Tor relays change circuits periodically?", "back": "To prevent traffic analysis and reduce linkability between streams. Default is circuit rotation every minute if used"}
+{"front": "Bitcoin's solution to timestamp tampering", "back": "Each block contains previous block's hash, forming chain. Changing timestamp requires redoing all subsequent proof-of-work"}
+{"front": "Primary differences between CP and AP systems in CAP", "back": "CP systems: sacrifice availability during partitions to maintain consistency\nAP systems: continue operating with stale data during partitions"}
+{"front": "BitTorrent's tit-for-tat mechanism", "back": "Peers upload to those providing best download rates. Encourages reciprocation and prevents free-riding"}
+{"front": "Requirements for Byzantine Fault Tolerance", "back": "Need $n \\geq 3f + 1$ total processes where $f$ is number of Byzantine processes"}
+{"front": "How does Bitcoin adjust mining difficulty?", "back": "Recalculates every 2016 blocks targeting 10-minute average block time. Difficulty $\\propto$ total network hash rate"}
+{"front": "What is a Guard node in Tor?", "back": "First relay in circuit, remains fixed for extended period to prevent entry node profiling attacks"}
+{"front": "Byzantine Agreement impossibility result", "back": "No deterministic solution exists for $n \\leq 3f$ processes with $f$ Byzantine faults"}
+{"front": "Role of nonce in Bitcoin blocks", "back": "Miners modify nonce to try different block hashes until finding one meeting difficulty target"}
+{"front": "BitTorrent's optimistic unchoking purpose", "back": "Periodically unchokes random peer regardless of their contribution to discover potentially better partners"}
+{"front": "Key privacy weakness of probe requests", "back": "Broadcast nature reveals device's preferred networks (PNL), enabling location tracking and social graph analysis"}
+{"front": "Tor's defense against timing analysis", "back": "None directly - relies on high traffic volume and multiple hops to make correlation harder"}
+{"front": "Bitcoin's chain selection rule", "back": "Always choose chain with most cumulative proof-of-work (usually longest). Ensures consensus convergence"}
+{"front": "Requirements for reducing BA to IC", "back": "1) $n > 3f$ processes 2) Synchronous system 3) Authenticated messages"}
+{"front": "How does Tor achieve forward secrecy?", "back": "Uses Diffie-Hellman key exchange at each hop. Compromising current keys cannot decrypt past traffic"}
+{"front": "Core idea of Nakamoto consensus", "back": "Replace voting with proof-of-work competition. Majority of computing power determines valid chain"}
+{"front": "BitTorrent's rarest-first strategy rationale", "back": "Maximizes piece diversity in network, prevents rare pieces from becoming unavailable"}
+{"front": "Main challenge in Byzantine Agreement", "back": "Achieving consensus despite arbitrary (Byzantine) behavior of faulty processes, including lying and collusion"}
+{"front": "What makes changing Bitcoin history hard?", "back": "Must redo proof-of-work for target block and all subsequent blocks, then catch up to honest chain"}
